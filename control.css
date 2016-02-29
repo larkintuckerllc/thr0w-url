@@ -1,0 +1,60 @@
+html,body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background-color: rgb(0,0,0);
+}
+#tabs {
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  background-color: rgb(255,255,255);
+}
+.tabs__tab {
+  border-top: solid 1px black;
+  padding: 10px;
+  list-style-type: none;
+  font-size: 20px;
+}
+.tabs__tab:last-child {
+  border-bottom: solid 1px black;
+}
+.tabs__tab__focus {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  border: 3px solid rgb(0,0,0);
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255,255,255);
+  vertical-align: middle;
+}
+.tabs__tab__focus__arrow {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 20px solid transparent; 
+  border-bottom: 20px solid transparent; 
+  border-left: 20px solid rgb(0,0,0); 
+}
+.tabs__tab__button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+}
+.tabs__tab__section {
+  margin-top: 10px;
+}
+.tabs__tab__section__bookmark {
+  text-decoration: underline;
+}
