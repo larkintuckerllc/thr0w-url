@@ -2,13 +2,13 @@
   "manifest_version": 2,
   "name": "Thr0w URL",
   "description": "Allows one to remotely control browser's location using a Thr0w server <http://thr0w.io>.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["socket.io.js", "thr0w-client/js/thr0w-base.js", "background.js"]
+    "scripts": ["socket.io.js", "bower_components/thr0w-client/dist/thr0w-base.min.js", "background.js"]
   },
   "content_scripts": [
     {

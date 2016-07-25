@@ -1,0 +1,20 @@
+{
+  "name": "thr0w-url",
+  "homepage": "https://github.com/larkintuckerllc/thr0w-url",
+  "authors": [
+    "John Tucker <john@larkintuckerllc.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "GNU",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "thr0w-client": "^2.1.3"
+  }
+}
