@@ -1,5 +1,3 @@
-README v0.1 / 04 APRIL 2016
-
 # Thr0w URL
 
 ## Introduction
@@ -16,7 +14,7 @@ project's required Thr0w Server implementation available at:
 https://github.com/larkintuckerllc/thr0w-server
 
 The Chrome extension allows one to remotely control the browser's
-location.
+location among other things.
 
 ## Installation
 
@@ -65,6 +63,29 @@ a back and close button for them.
 ```
 {
   "action": "control"
+}
+```
+
+**Capture**
+
+This command directs the browser to capture the current tab and
+sends a message to the _target_ channel with the image as a data URL.
+
+```
+{
+  "action": "capture",
+  "target": XX
+}
+```
+
+The sent message consists of:
+
+```
+{
+  "thr0w": {
+    "type": "capture",
+    "dataUrl": "XX"
+  }
 }
 ```
 

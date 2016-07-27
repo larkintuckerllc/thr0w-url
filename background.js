@@ -20,14 +20,27 @@
     function connect() {
     }
     function message(data) {
-      if (data.message.action === 'update') {
-        chrome.tabs.query({}, handleUpdate);
-      } else if (data.message.action === 'control') {
-        if (controlTabId) {
-          chrome.tabs.get(controlTabId, handleGet);
-        } else {
-          createControlTab();
-        }
+      var captureTarget;
+      switch (data.message.action) {
+        case 'update':
+          chrome.tabs.query({}, handleUpdate);
+          break;
+        case 'control':
+          if (controlTabId) {
+            chrome.tabs.get(controlTabId, handleGet);
+          } else {
+            createControlTab();
+          }
+          break;
+        case 'capture':
+          captureTarget = data.message.target;
+          if (captureTarget === undefined ||
+            typeof captureTarget !== 'number') {
+            return;
+          }
+          chrome.tabs.captureVisibleTab(handleCapture);
+          break;
+        default:
       }
       function handleUpdate(tabs) {
         var i;
@@ -46,6 +59,12 @@
           chrome.tabs.remove(controlTabId);
         }
         createControlTab();
+      }
+      function handleCapture(dataUrl) {
+        thr0w.thr0w([captureTarget], {thr0w: {
+          type: 'capture',
+          dataUrl: dataUrl
+        }});
       }
     }
     function handleTabsChange() {
