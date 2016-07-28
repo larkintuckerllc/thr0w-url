@@ -61,7 +61,7 @@
         createControlTab();
       }
       function handleCapture(dataUrl) {
-        thr0w.thr0w([captureTarget], {thr0w: {
+        thr0w.thr0wChannel([captureTarget], {thr0w: {
           type: 'capture',
           dataUrl: dataUrl
         }});
